@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
@@ -8,6 +9,15 @@ public class HomePage {
 
     public HomePage(WebDriver driver){
         this.driver = driver;
+    }
+
+    public void clickLink(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
+    public ForgotPassword clickFormForgotPasswordLink(){
+        clickLink("Forgot Password");
+        return new ForgotPassword(driver);
     }
 
 
