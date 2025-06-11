@@ -20,21 +20,6 @@ public class BaseTests {
         homePage = new HomePage(driver);
     }
 
-    /*
-    * @Test
-    public void testsCountMenus(){
-        WebElement shiftingContent = driver.findElement(By.linkText("Shifting Content"));
-        shiftingContent.click();
-
-        WebElement example1 = driver.findElement(By.linkText("Example 1: Menu Element"));
-        example1.click();
-
-        List<WebElement> menus = driver.findElements(By.tagName("li"));
-        assertEquals(menus.size(), 5);
-
-    }
-    * */
-
     @AfterClass
     public void tearDown(){
         driver.quit();

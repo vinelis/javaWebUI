@@ -2,19 +2,19 @@ package forgotPassword;
 
 import base.BaseTests;
 import org.testng.annotations.Test;
-import pages.ForgotPassword;
-import pages.InternalError;
+import pages.ForgotPasswordPage;
+import pages.InternalErrorPage;
 
 import static org.testng.Assert.assertEquals;
 
 
-public class SetEmailTests extends BaseTests {
+public class ForgotPasswordTests extends BaseTests {
 
     @Test
     public void setEmail(){
-        ForgotPassword forgotPassword = homePage.clickFormForgotPasswordLink();
+        ForgotPasswordPage forgotPassword = homePage.clickFormForgotPasswordLink();
         forgotPassword.setEmail("luca@gmail.com");
-        InternalError internalError = forgotPassword.clickRetrieveButton();
+        InternalErrorPage internalError = forgotPassword.clickRetrieveButton();
         assertEquals(internalError.getTittle(),"Internal Server Error", "The final answer's not what expected");
 
     }

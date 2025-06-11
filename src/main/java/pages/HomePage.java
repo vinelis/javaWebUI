@@ -15,9 +15,14 @@ public class HomePage {
         driver.findElement(By.linkText(linkText)).click();
     }
 
-    public ForgotPassword clickFormForgotPasswordLink(){
+    public ForgotPasswordPage clickFormForgotPasswordLink(){
         clickLink("Forgot Password");
-        return new ForgotPassword(driver);
+        return new ForgotPasswordPage(driver);
+    }
+
+    public ShiftingContentPage clickFormShiftingContent(){
+        clickLink("Shifting Content");
+        return new ShiftingContentPage(driver);
     }
 
 

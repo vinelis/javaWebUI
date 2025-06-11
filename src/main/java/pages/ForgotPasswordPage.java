@@ -3,13 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ForgotPassword {
+public class ForgotPasswordPage {
 
     private WebDriver driver;
     private By emailField = By.id("email");
     private By retrieveButton = By.id("form_submit");
 
-    public ForgotPassword(WebDriver driver){
+    public ForgotPasswordPage(WebDriver driver){
         this.driver = driver;
     }
 
@@ -17,9 +17,9 @@ public class ForgotPassword {
         driver.findElement(emailField).sendKeys(email);
     }
 
-    public InternalError clickRetrieveButton(){
+    public InternalErrorPage clickRetrieveButton(){
         driver.findElement(retrieveButton).click();
-        return new InternalError(driver);
+        return new InternalErrorPage(driver);
     }
 
 

@@ -3,12 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class InternalError {
+public class InternalErrorPage {
 
     private WebDriver driver;
     private By tittle = By.tagName("h1");
 
-    public InternalError(WebDriver driver){
+    public InternalErrorPage(WebDriver driver){
         this.driver = driver;
     }
 
