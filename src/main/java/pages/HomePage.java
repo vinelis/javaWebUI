@@ -25,5 +25,15 @@ public class HomePage {
         return new ShiftingContentPage(driver);
     }
 
+    public HorizontalSliderPage clickHorizontalSliderPage(){
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
+    public ContextMenu clickContextMenu(){
+        clickLink("Context Menu");
+        return new ContextMenu(driver);
+    }
+
 
 }
