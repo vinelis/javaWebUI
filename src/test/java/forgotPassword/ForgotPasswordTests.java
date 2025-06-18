@@ -11,7 +11,7 @@ import static org.testng.Assert.assertEquals;
 public class ForgotPasswordTests extends BaseTests {
 
     @Test
-    public void setEmail(){
+    public void TestsSetEmail(){
         ForgotPasswordPage forgotPassword = homePage.clickFormForgotPasswordLink();
         forgotPassword.setEmail("luca@gmail.com");
         InternalErrorPage internalError = forgotPassword.clickRetrieveButton();

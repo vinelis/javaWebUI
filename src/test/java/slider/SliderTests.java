@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 public class SliderTests extends BaseTests {
 
     @Test
-    public void letsSlide(){
+    public void TestsLetsSlide(){
         HorizontalSliderPage horizontalSliderPage = homePage.clickHorizontalSliderPage();
 
         for(int i = 0; i < 8; i++){

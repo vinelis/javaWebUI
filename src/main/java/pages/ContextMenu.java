@@ -14,16 +14,16 @@ public class ContextMenu {
     }
 
 
-    public void BoxtoClick(){
+    public void boxtoClick(){
         Actions actions = new Actions(driver);
         actions.contextClick(driver.findElement(rectangle)).perform();
     }
 
-    public String GetAlertText(){
+    public String getAlertText(){
         return driver.switchTo().alert().getText();
     }
 
-    public void AcceptAlert(){
+    public void acceptAlert(){
         driver.switchTo().alert().accept();
     }
 }

@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.lang.constant.DynamicConstantDesc;
+
 public class HomePage {
 
     private WebDriver driver;
@@ -13,6 +15,16 @@ public class HomePage {
 
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
+    }
+
+    public Frames clickFromFrames(){
+        clickLink("Frames");
+        return new Frames(driver);
+    }
+
+    public DynamicLoading clickFormDynamicLoad(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoading(driver);
     }
 
     public ForgotPasswordPage clickFormForgotPasswordLink(){

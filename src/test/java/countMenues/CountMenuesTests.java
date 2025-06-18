@@ -10,7 +10,7 @@ import static org.testng.AssertJUnit.assertEquals;
 public class CountMenuesTests extends BaseTests {
 
     @Test
-    public void getMenuesCount(){
+    public void TestsGetMenuesCount(){
         ShiftingContentPage shiftingContent = homePage.clickFormShiftingContent();
         MenuElementPage menuElement = shiftingContent.clickToMenu();
         assertEquals("There's an error counting the menues", menuElement.getMenus().size(), 5);

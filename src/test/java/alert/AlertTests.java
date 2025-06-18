@@ -14,9 +14,9 @@ public class AlertTests extends BaseTests {
     @Test
     public void testsTriggerAlert(){
         ContextMenu contextMenu = homePage.clickContextMenu();
-        contextMenu.BoxtoClick();
-        String textOut = contextMenu.GetAlertText();
-        contextMenu.AcceptAlert();
+        contextMenu.boxtoClick();
+        String textOut = contextMenu.getAlertText();
+        contextMenu.acceptAlert();
         assertEquals(textOut, "You selected a context menu", "The text in the alert is wrong");
 
 
