@@ -22,6 +22,10 @@ public class DynamicLoadingExample2 {
         wait.until(ExpectedConditions.presenceOfElementLocated(loadedText));
     }
 
+    public Boolean isTheStartButtonThere(){
+        return driver.findElement(startButton).isDisplayed();
+    }
+
     public String getLoadedText(){
         return driver.findElement(loadedText).getText();
     }

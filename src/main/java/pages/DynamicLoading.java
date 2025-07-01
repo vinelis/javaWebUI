@@ -1,7 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class DynamicLoading {
     WebDriver driver;
@@ -13,6 +15,15 @@ public class DynamicLoading {
 
     public DynamicLoadingExample2 clickExample2(){
         driver.findElement(linkExample2).click();
+        return new DynamicLoadingExample2(driver);
+    }
+
+    public DynamicLoadingExample2 clickControlAndClick(){
+        Actions actions = new Actions(driver);
+        actions.keyDown(Keys.CONTROL)
+                .click(driver.findElement(linkExample2))
+                .keyUp(Keys.CONTROL)
+                .build().perform();
         return new DynamicLoadingExample2(driver);
     }
 
