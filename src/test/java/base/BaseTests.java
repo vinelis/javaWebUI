@@ -2,6 +2,7 @@ package base;
 
 
 import com.google.common.io.Files;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -23,8 +24,9 @@ public class BaseTests {
 
     @BeforeClass
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver_vers137.0.7151.68.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         goHome();
 
         homePage = new HomePage(driver);
@@ -32,7 +34,7 @@ public class BaseTests {
 
     @BeforeMethod
     public void goHome(){
-        driver.get("https://the-internet.herokuapp.com/");
+        driver.get("https://osvaldovinelli.com.ar/");
     }
 
     @AfterClass
